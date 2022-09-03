@@ -26,7 +26,11 @@ export default function App() {
 
   const handleSubmit = e => {
     e.preventDefault()
-    if (!form.title) alert("Please fill out all fields")
+    if (!form.title) {
+      alert("Please fill out all fields")
+      return
+    }
+
     addDoc(quotesCollectionRef, form)
     setForm({
       title: "",
@@ -61,7 +65,7 @@ export default function App() {
         </div>
 
         <div className="buttons">
-          <button type="submit">Submit</button>
+          <button classNAme="ripple" type="submit">Submit</button>
         </div>
       </form>
 
@@ -76,7 +80,7 @@ export default function App() {
             <p dangerouslySetInnerHTML={{ __html: quote.text }}></p>
 
             <div>
-              <button className="remove" onClick={() => removeQuote(quote.id)}>Remove</button>
+              <button classNAme="ripple" className="remove" onClick={() => removeQuote(quote.id)}>Remove</button>
             </div>
 
           </div>
