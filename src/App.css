@@ -36,7 +36,7 @@ body {
   padding: 2rem;
   background-color: #3b4049;
   min-width: 600px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
 }
@@ -49,10 +49,10 @@ form {
   flex-direction: column;
   /* border: solid rgb(27, 25, 39); */
   padding: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   background-color: #3b4049;
   min-width: 600px;
-  margin-top: 2rem;
+  margin-top: 3rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
@@ -91,30 +91,14 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   color: white;
-  background: radial-gradient(circle at 3% 7.4%, rgb(0, 144, 243) 0%, rgb(0, 86, 240) 90%);
   outline: none;
-  border-radius: 2rem;
-  /*   box-shadow: 0 0 4px grey; */
+  border-radius: .2rem;
+  background: radial-gradient(circle at 3% 7.4%, rgb(0, 144, 243) 0%, rgb(0, 86, 240) 90%);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.653), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
 }
 
-
-.ripple {
-  background-position: center;
-  transition: 0.5s;
-}
-
-.ripple:hover {
-  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
-}
-
-.ripple:active {
-  background-color: black;
-  background-size: 100%;
-  transition: 0s;
-}
 
 .remove {
   background: radial-gradient(circle at 3% 7.4%, rgb(233, 69, 69) 0%, rgb(172, 15, 15) 90%);
