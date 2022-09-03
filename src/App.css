@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+button {
+  margin: 3rem;
+  padding: .5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: solid rgb(27, 25, 39);
+  padding: 2rem;
+  background-color: #3b4049;
+  min-width: 600px;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: solid rgb(27, 25, 39);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: #3b4049;
+  min-width: 600px;
+  margin-top: 2rem;
+}
+
+label {
+  margin-right: 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+input {
+  height: 2rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+
+textarea {
+  height: 5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
