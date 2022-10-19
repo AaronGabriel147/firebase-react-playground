@@ -20,7 +20,6 @@ export default function App() {
     title: "",
     text: "",
   });
-  // const [imageUpload, setImageUpload] = useState(null);
 
 
   const quotesCollectionRef = collection(db, "quotes");
@@ -40,8 +39,8 @@ export default function App() {
   // Create
   const handleSubmit = e => {
     e.preventDefault()
-    if (!form.title) {
-      alert("Title cannot be blank.")
+    if (!form.text) {
+      alert("Todo cannot be blank.")
       return
     }
 
@@ -56,57 +55,27 @@ export default function App() {
   const removeQuote = id => deleteDoc(doc(db, "quotes", id))
 
 
-  // ----------------------------------------
-
-
-  // const uploadImage = e => {
-  //   if (imageUpload == null) {
-  //     alert("Please select an image.")
-  //     return
-  //   }
-
-  //   const imageRef = ref(db, `images/${imageUpload.name}`)
-
-  // }
-
   return (
     <div className="app">
-
-      {/* FORM */}
-
-
+      <h1>TODO</h1>
       <form onSubmit={handleSubmit}>
-
-
-        {/* <input
-          id="choose-file"
-          type="file"
-          onChange={e => setImageUpload(e.target.files[0])}
-        />
-        <button onClick={uploadImage}>Upload</button> */}
-
-        {/* {imageUrls.map((url) => {
-          return <img src={url} />;
-        })} */}
-
-        <div>
+        {/* <div>
           <label>Title</label>
           <input
             type="text"
             value={form.title}
             onChange={e => setForm({ ...form, title: e.target.value })} />
-        </div>
+        </div> */}
 
-        {/* <div>
-          <label>Text</label>
+        <div>
           <textarea
             type="text"
             value={form.text}
             onChange={e => setForm({ ...form, text: e.target.value })} />
-        </div> */}
+        </div>
 
         <div className="buttons">
-          <button classNAme="ripple" type="submit">Submit</button>
+          <button className="ripple" type="submit">Submit</button>
         </div>
       </form>
 
@@ -116,9 +85,9 @@ export default function App() {
       <div>
         {quotes.map((quote, index) => (
           <div className="cards" key={quote.id} >
-            <p>{quote.title}</p>
-            <p>{quote.text}</p>
-            <button classNAme="ripple" className="remove" onClick={() => removeQuote(quote.id)}>Remove</button>
+            <p dangerouslySetInnerHTML={{ __html: quote.text }}></p>
+            {/* <p>{quote.text}</p> */}
+            <button className="ripple" onClick={() => removeQuote(quote.id)}>Remove</button>
           </div>
         ))
         }
