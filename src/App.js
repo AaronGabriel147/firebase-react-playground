@@ -57,7 +57,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>TODO</h1>
+      <h1>memorandum</h1>
       <form onSubmit={handleSubmit}>
         {/* <div>
           <label>Title</label>

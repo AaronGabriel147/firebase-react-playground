@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 
 :root {
   --blue: rgba(125, 2, 248, 0.685) 0px 4px 24px;
@@ -25,16 +25,17 @@
 
 body {
   height: 100vh;
+  /* width: 100vw; */
   background-attachment: fixed;
-  margin-bottom: 9rem;
+  background-size: cover;
   background-position: center;
   min-height: -webkit-fill-available;
   background-color: #1a1a1f;
-  background: linear-gradient(to right, #1d1e1f 0%, rgb(31, 28, 34) 100%);
+  background-image: url('./crop2.jpg');
+  background-repeat: no-repeat;
+  /* margin-bottom: 9rem; */
+  /* background: linear-gradient(to right, #1d1e1f 0%, rgb(31, 28, 34) 100%); */
   /* background-image: url('https://www.transparenttextures.com/patterns/subtle-white-feathers.png'); */
-  /* background-size: 45%; */
-  /* background-repeat: no-repeat; */
-
 }
 
 .app {
@@ -56,8 +57,9 @@ p {
 }
 
 h1 {
-  font-family: 'Cinzel Decorative', cursive;
-  color: rgba(109, 16, 214, 0.829);
+  font-family: 'Goldman', cursive;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.904);
   letter-spacing: 10px;
   margin-top: 3rem;
   display: flex;
@@ -65,7 +67,8 @@ h1 {
   justify-content: center;
   text-align: center;
   word-spacing: 1rem;
-  font-size: 5rem;
+  font-size: 4rem;
+  text-shadow: 2px 2px 2px rgb(102, 11, 187);
 }
 
 
