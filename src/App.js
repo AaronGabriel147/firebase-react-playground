@@ -57,7 +57,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>memorandum</h1>
+      <h1>NOTES</h1>
       <form onSubmit={handleSubmit}>
         {/* <div>
           <label>Title</label>
@@ -71,6 +71,7 @@ export default function App() {
           <textarea
             type="text"
             value={form.text}
+            placeholder="Enter note..."
             onChange={e => setForm({ ...form, text: e.target.value })} />
         </div>
 
