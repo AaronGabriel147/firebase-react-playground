@@ -1,6 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 
+
+
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #282c34;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(93, 91, 105);
+  border-radius: 1.25rem;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #969595;
+}
+
 :root {
   /* --blue: rgba(125, 2, 248, 0.685) 0px 4px 24px; */
   /* --blue: rgb(255, 0, 0) 0px 4px 24px; */
@@ -15,13 +36,8 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
+  /* border: 1px solid grey; */
 }
-
-/* body {
-  min-height: 100vh;
-  background-attachment: fixed;
-  background-color: #1a1a1f;
-} */
 
 
 body {
@@ -72,76 +88,12 @@ h1 {
   text-shadow: 1px 2px 19px rgba(10, 71, 94, 0.703);
 }
 
-
-form {
-  width: 42rem;
-  /* border-radius: 20px; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 0;
-  padding: 2rem;
-  margin-top: 3rem;
-  border: 1px solid var(--border);
-  background-color: #222222;
-  box-shadow: 0px 3px 14px var(--shadow);
-
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #2f54a5d3, #28ad83db);
-}
-
-
-
-textarea {
-  margin-top: 1rem;
-  height: 10rem;
-  width: 35rem;
-  font-size: 1.2rem;
-  padding: 0.7rem;
-  outline: 0;
-  border-width: 3px;
-  background-color: rgba(31, 106, 172, 0);
-  border: .1px solid rgb(80, 111, 126);
-  color: white;
-  background-color: #1d1d1d;
-}
-
-
-textarea:focus {
-  border-width: 1px;
-  border-image: var(--blue);
-  border-image-slice: 1;
-}
-
-
-.cards {
-  width: 50rem;
-  /* border-radius: 20px; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 0;
-  padding: 2rem;
-  min-width: 600px;
-  margin-bottom: 5rem;
-  margin-top: 4rem;
-  background-color: #222222;
-  border: 1px solid var(--border);
-  box-shadow: 0px 3px 19px var(--shadow);
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #2f54a5d3, #28ad83db);
-}
-
-
-
 button {
   width: 10rem;
   padding: .5rem 1.1rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
   border: 1px solid rgb(65, 113, 131);
   font-size: 15px;
   text-transform: uppercase;
@@ -154,26 +106,93 @@ button {
   background-color: #1d1d1d
 }
 
-
 button:hover {
   opacity: 0.8;
 }
 
-::-webkit-scrollbar {
-  width: 13px;
+
+form {
+  width: 42rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 0;
+  padding-top: 2rem;
+  margin-top: 3rem;
+  border: 1px solid var(--border);
+  background-color: #222222;
+  box-shadow: 0px 3px 14px var(--shadow);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #2f54a5d3, #28ad83db);
 }
 
-::-webkit-scrollbar-track {
-  background-color: #282c34;
+textarea {
+  margin-top: 1rem;
+  height: 8rem;
+  width: 35rem;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  outline: 0;
+  border-width: 3px;
+  background-color: rgba(31, 106, 172, 0);
+  border: .1px solid rgb(80, 111, 126);
+  color: white;
+  background-color: #1d1d1d;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: rgb(93, 91, 105);
-  border-radius: 1.25rem;
-  border: 2px solid transparent;
-  background-clip: content-box;
+textarea:focus {
+  border-width: 1px;
+  border-image: var(--blue);
+  border-image-slice: 1;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #969595;
+.cards {
+  /* width: 70%; */
+  width: 42rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 0;
+  padding: 2rem;
+  /* min-width: 350px; */
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+  background-color: #222222;
+  border: 1px solid var(--border);
+  box-shadow: 0px 3px 19px var(--shadow);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #2f54a5d3, #28ad83db);
+}
+
+
+@media only screen and (max-width: 715px) {
+  form {
+    width: 95%;
+  }
+
+  textarea {
+    margin-top: 1rem;
+    height: 8rem;
+    width: 20rem;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+
+
+  .cards {
+    width: 95%;
+    padding: .5rem;
+
+  }
+
+  /* p {
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 1.5;
+    font-size: 1.1rem;
+  } */
 }

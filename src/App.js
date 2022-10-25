@@ -40,7 +40,7 @@ export default function App() {
   const handleSubmit = e => {
     e.preventDefault()
     if (!form.text) {
-      alert("Todo cannot be blank.")
+      alert("Submission cannot be blank.")
       return
     }
 
@@ -59,13 +59,6 @@ export default function App() {
     <div className="app">
       <h1>NOTES</h1>
       <form onSubmit={handleSubmit}>
-        {/* <div>
-          <label>Title</label>
-          <input
-            type="text"
-            value={form.title}
-            onChange={e => setForm({ ...form, title: e.target.value })} />
-        </div> */}
 
         <div>
           <textarea
@@ -76,19 +69,16 @@ export default function App() {
         </div>
 
         <div className="buttons">
-          <button className="ripple" type="submit">Submit</button>
+          <button type="submit">add</button>
         </div>
       </form>
 
-
-      {/* CARDS */}
-
-      <div>
+      {/*  className="app" */}
+      <div className="app">
         {quotes.map((quote, index) => (
           <div className="cards" key={quote.id} >
             <p dangerouslySetInnerHTML={{ __html: quote.text }}></p>
-            {/* <p>{quote.text}</p> */}
-            <button className="ripple" onClick={() => removeQuote(quote.id)}>Remove</button>
+            <button onClick={() => removeQuote(quote.id)}>Remove</button>
           </div>
         ))
         }
